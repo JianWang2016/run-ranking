@@ -30,3 +30,7 @@ yarn-error.log*
 
 # vercel
 .vercel
+
+# old styples
+/styles/globals.css.sav
+/styles/Home.module.css.sav
