@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import { RaceCreateForm } from '../src/ui-components';
 
 const Entry = () => {
   return (
@@ -9,8 +10,8 @@ const Entry = () => {
       </Head>
 
       <div>
-        
-        <p>entry form</p>
+
+        <RaceCreateForm />
 
       </div>
 
