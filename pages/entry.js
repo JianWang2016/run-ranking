@@ -9,7 +9,8 @@ import "@aws-amplify/ui-react/styles.css";
 import { studioTheme } from "../src/ui-components";
 
 Amplify.configure(awsconfig);
-// End setup
+// End setup from amplify studio instruction for initial setup. 
+// this shouldn't matter but just in case.
 
 const Entry = () => {
   return (
