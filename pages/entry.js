@@ -1,17 +1,16 @@
-import React from 'react'
 import Head from 'next/head'
 
-const Login = () => {
+const Entry = () => {
   return (
     <>
       <Head>
-      <title>Marathon Ranking | Login</title>
+      <title>Marathon Ranking | Join </title>
       <meta name="keywords" content="Ranking Marathon Finishing Time" />
       </Head>
 
       <div>
         
-        <p>login form</p>
+        <p>entry form</p>
 
       </div>
 
@@ -19,4 +18,4 @@ const Login = () => {
   )
 }
 
-export default Login
+export default Entry
