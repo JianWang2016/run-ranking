@@ -81,7 +81,7 @@ export default function Home(races) {
         <h1 className={styles.title}>Marathan Finish Time Ranking - All</h1>
         
         <div>
-          results
+          <h1>results</h1>
         </div>
 
         <p className={styles.text}>
