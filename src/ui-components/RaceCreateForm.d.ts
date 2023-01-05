@@ -6,7 +6,7 @@
 
 import * as React from "react";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
-import { GridProps, SelectFieldProps, TextFieldProps } from "@aws-amplify/ui-react";
+import { GridProps, SelectFieldProps, TextFieldProps, TextProps } from "@aws-amplify/ui-react";
 export declare type ValidationResponse = {
     hasError: boolean;
     errorMessage?: string;
@@ -47,11 +47,12 @@ export declare type RaceCreateFormOverridesProps = {
     finishSec?: FormProps<TextFieldProps>;
     raceDate?: FormProps<TextFieldProps>;
     raceName?: FormProps<TextFieldProps>;
-    RowGrid2?: FormProps<GridProps>;
+    SectionalElement0?: FormProps<TextProps>;
+    RowGrid3?: FormProps<GridProps>;
     firstName?: FormProps<TextFieldProps>;
     middleName?: FormProps<TextFieldProps>;
     lastName?: FormProps<TextFieldProps>;
-    RowGrid3?: FormProps<GridProps>;
+    RowGrid4?: FormProps<GridProps>;
     gender?: FormProps<SelectFieldProps>;
     birthdate?: FormProps<TextFieldProps>;
     email?: FormProps<TextFieldProps>;

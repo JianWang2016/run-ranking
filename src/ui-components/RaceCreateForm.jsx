@@ -14,6 +14,7 @@ import {
   Flex,
   Grid,
   SelectField,
+  Text,
   TextField,
 } from "@aws-amplify/ui-react";
 import { DataStore } from "aws-amplify";
@@ -69,14 +70,60 @@ export default function RaceCreateForm(props) {
     setErrors({});
   };
   const validations = {
-    finishHour: [{ type: "Required" }],
-    finishMin: [],
-    finishSec: [],
+    finishHour: [
+      { type: "Required" },
+      {
+        type: "LessThanNum",
+        numValues: [10],
+        validationMessage: "The value must be less than 10",
+      },
+    ],
+    finishMin: [
+      {
+        type: "LessThanNum",
+        numValues: [60],
+        validationMessage: "The value must be less than 60",
+      },
+    ],
+    finishSec: [
+      {
+        type: "LessThanNum",
+        numValues: [60],
+        validationMessage: "The value must be less than 60",
+      },
+    ],
     raceDate: [{ type: "Required" }],
-    raceName: [{ type: "Required" }],
-    firstName: [{ type: "Required" }],
-    middleName: [],
-    lastName: [{ type: "Required" }],
+    raceName: [
+      { type: "Required" },
+      {
+        type: "LessThanChar",
+        numValues: [100],
+        validationMessage: "The value must be 100 characters or fewer",
+      },
+    ],
+    firstName: [
+      { type: "Required" },
+      {
+        type: "LessThanChar",
+        numValues: [50],
+        validationMessage: "The value must be 50 characters or fewer",
+      },
+    ],
+    middleName: [
+      {
+        type: "LessThanChar",
+        numValues: [50],
+        validationMessage: "The value must be 50 characters or fewer",
+      },
+    ],
+    lastName: [
+      { type: "Required" },
+      {
+        type: "LessThanChar",
+        numValues: [50],
+        validationMessage: "The value must be 50 characters or fewer",
+      },
+    ],
     gender: [{ type: "Required" }],
     birthdate: [],
     email: [{ type: "Email" }],
@@ -350,11 +397,15 @@ export default function RaceCreateForm(props) {
         hasError={errors.raceName?.hasError}
         {...getOverrideProps(overrides, "raceName")}
       ></TextField>
+      <Text
+        children="Please fill in the name used for race registration"
+        {...getOverrideProps(overrides, "SectionalElement0")}
+      ></Text>
       <Grid
         columnGap="inherit"
         rowGap="inherit"
         templateColumns="repeat(3, auto)"
-        {...getOverrideProps(overrides, "RowGrid2")}
+        {...getOverrideProps(overrides, "RowGrid3")}
       >
         <TextField
           label="First name"
@@ -460,7 +511,7 @@ export default function RaceCreateForm(props) {
         columnGap="inherit"
         rowGap="inherit"
         templateColumns="repeat(2, auto)"
-        {...getOverrideProps(overrides, "RowGrid3")}
+        {...getOverrideProps(overrides, "RowGrid4")}
       >
         <SelectField
           label="Gender"
